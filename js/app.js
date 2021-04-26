@@ -14,6 +14,9 @@ $(document).ready(function () {
     }
 
     if (x === true) {
+		$(".loader-container").show();
+		$(".above-the-fold").hide();
+		$(".features").hide();
       document.querySelector('input[type="text"]').parentNode.classList.remove("error");
       const proxyurl = "";
       const url =
@@ -52,6 +55,9 @@ $(document).ready(function () {
 
 
       if (x === true) {
+    $(".loader-container").show();
+		$(".above-the-fold").hide();
+		$(".features").hide();
         const proxyurl = "";
         const url =
           'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + email;
