@@ -369,6 +369,9 @@ section {
   .search-again {
     padding: 40px 0;
   }
+  .input-group.error .error-msg{
+	  position:static;
+  }
 }
 
 /* ************************************************************
