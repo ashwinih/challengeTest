@@ -116,6 +116,17 @@ section {
   margin-left: 20px;
 }
 
+.btn-form-submit:hover, .btn-form-submit:focus{
+	background:#F2DA56;
+	transition:none;
+}
+
+.btn-form-submit:active{
+	background:#F6BC25;
+	transition:none;
+}
+
+
 .input-group > .form-control {
   height: 70px;
   background: #FFF;
