@@ -400,6 +400,12 @@ section {
   content: '|';
   padding-left: 5px;
 }
+
+
+.search-box {
+    cursor: pointer;
+}
+
 /* end loader */
 .loader {
   
@@ -442,11 +448,128 @@ section {
     font-weight: 700;
 }
 /* end loader */
+
+
+
+/* start nav */
+nav > .nav.nav-tabs{
+
+  border: none;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 18px 25px;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+}
+
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+  bottom: -60px;
+  left: -10%;
+  border: 15px solid transparent;
+  border-top-color: #e74c3c ;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    background: #e74c3c;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+
+.nav-link.active {
+    background-color: #F6BC25 !important;
+    color: #004A80 !important;
+}
+
+.nav-tabs {
+    border-bottom: none;
+	margin-bottom:30px;
+	width:auto;
+	float:left;
+}
+
+.nav-tabs .nav-item .nav-link {
+    border: 3px solid #F6BC25!important;
+    margin: 0 !important;
+    border-radius: 6px;
+    color: #F6BC25;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 700;
+	padding-top: 5px;
+    padding-bottom: 5px;
+	position:relative;
+}
+
+.nav-tabs .nav-item:first-child {padding-right: 20px;}
+.nav-link.active:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 45%;
+    border: 9px solid transparent;
+    border-top-color: #F6BC25;
+    margin: auto;
+}
+/* end nav */
+
+/* start search tabs */
+.search-tab{
+	width:100%;
+	float:left;
+}
+.search-type{
+	font-size:16px;
+	color:#fff;
+	display: block;
+	padding-right: 15px;
+	box-sizing: border-box;
+	padding-top:7px;
+	float:left;
+}
+/* end search tabs */
+
 /* start media query for mobile */
 @media (max-width: 481px) {
 	.sm-hidden{
 		display:none !important;
 	}
+	.sm-mar-0{
+		margin:0;
+	}
+	.nav-tabs .nav-item:first-child{
+		padding-right:10px;
+		/* width: 50%; */
+	}
+	.nav-tabs .nav-item .nav-link{
+		padding-left:4px;
+		padding-right:4px;
+		font-size: 14px;
+	}
+	.nav-tabs .nav-item{
+		width:50%;
+		float:left;
+		text-align: center;
+	}
+	.nav-tabs{
+		width:100%;
+		float:left;
+	}
+	
 	.loader{
 		width:124px;
 		height:124px;
