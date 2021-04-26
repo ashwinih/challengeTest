@@ -21,10 +21,8 @@ $(document).ready(function() {
                 return false;
             }
 
-            /* show loader*/
-            $(".loader-container").show();
-            $(".above-the-fold").hide();
-            $(".features").hide();
+            showLoader(); //show loader
+			
             document.querySelector('input[name="email"]').parentNode.classList.remove("error");
             const proxyurl = "";
             const url =
@@ -72,10 +70,8 @@ $(document).ready(function() {
                 return false;
             }
 
-            /* show loader*/
-            $(".loader-container").show();
-            $(".above-the-fold").hide();
-            $(".features").hide();
+           showLoader(); //show loader
+		   
             document.querySelector('input[name="phone"]').parentNode.classList.remove("error");
             const proxyurl = "";
             const url =
@@ -122,11 +118,8 @@ $(document).ready(function() {
                     return false;
                 }
 
-                /* show loader*/
-                $(".loader-container").show();
-                $(".above-the-fold").hide();
-                $(".features").hide();
-
+                showLoader(); //show loader
+				
                 const proxyurl = "";
                 const url =
                     'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + email;
@@ -191,10 +184,8 @@ $(document).ready(function() {
                     return false;
                 }
 
-                /* show loader*/
-                $(".loader-container").show();
-                $(".above-the-fold").hide();
-                $(".features").hide();
+                showLoader(); //show loader
+				
                 const proxyurl = "";
                 const url =
                     'https://ltv-data-api.herokuapp.com/api/v1/records.json?phone=' + phone;
@@ -217,6 +208,14 @@ $(document).ready(function() {
         $("form .input-group").removeClass("error");
         $('input').val("");
     })
+	
+	function showLoader(){
+		$(".loader-container").show();
+		$(".above-the-fold").hide();
+		$(".features").hide();
+		$(".result").hide();
+		$(".search-again").hide();
+	}
 
 
 });
