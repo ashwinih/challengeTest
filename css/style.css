@@ -386,3 +386,18 @@ section {
   content: '|';
   padding-left: 5px;
 }
+/* start media query for mobile */
+@media (max-width: 481px) {
+	.sm-hidden{
+		display:none !important;
+	}
+}
+/* end media query for mobile */
+
+/* start media query for tab and desktop */
+@media (min-width: 481px) {
+	.md-hidden{
+		display:none !important;
+	}
+}
+/* end media query for tab and desktop */
