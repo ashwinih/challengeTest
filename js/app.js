@@ -24,7 +24,7 @@ $(document).ready(function() {
             if (x === true) {
                 networkCheck() // check network
                 showLoader(); //show loader
-                apiCall(); //call api
+                apiCall("email",email); //call api
 
             } else if (x !== true) {
                 document.querySelector('input[name="email"]').parentNode.classList.add("error");
@@ -75,7 +75,7 @@ $(document).ready(function() {
             if (x === true) {
                 networkCheck() // check network
                 showLoader(); //show loader
-                apiCall(); //call api
+                apiCall("phone",phone); //call api
 
             } else if (x !== true) {
                 document.querySelector('input[name="phone"]').parentNode.classList.add("error");
@@ -142,10 +142,10 @@ function sumbitForm(type, e) {
 
         if (type == "email") {
             document.querySelector('input[name="email"]').parentNode.classList.remove("error");
-            apiCall(email); //call api
+            apiCall("email",email); //call api
         } else {
             document.querySelector('input[name="phone"]').parentNode.classList.remove("error");
-            apiCall(phone); //call api
+            apiCall("phone",phone); //call api
         }
 
     } else if (x !== true) {
@@ -166,13 +166,13 @@ function networkCheck() {
 }
 
 /* call api */
-function apiCall(type) {
+function apiCall(type, input) {
     const proxyurl = "";
     var url = "";
     if (type == "email") {
-        url = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + email;
+        url = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?email=' + input;
     } else {
-        url = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?phone=' + phone;
+        url = 'https://ltv-data-api.herokuapp.com/api/v1/records.json?phone=' + input;
     }
 
     fetch(proxyurl + url)
